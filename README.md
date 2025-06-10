@@ -2,7 +2,59 @@
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-After setup, it is recommended you update this README to describe your custom image.
+
+Image base: ghcr.io/ublue-os/bluefin-dx-nvidia-open
+```
+Changes:
+    repos:
+      cleanup: true
+      copr:
+        - iucar/rstudio
+
+    install:
+      packages:
+        - fish
+        - tmux
+        - kmymoney
+        - micro
+        - python3-pip
+        - r
+        - rstudio
+        - fontawesome-fonts-all
+        - freetype-devel
+        - fribidi-devel
+        - zsh
+        - java-latest-openjdk-devel
+        - gcc
+        - gcc-c++
+        - gcc-gfortran
+        - clang
+        - llvm
+        - sqlitebrowser
+        - lftp
+        - libcurl-devel
+        - libjpeg-turbo-devel
+        - libpng-devel
+        - libtiff-devel
+        - llvm-devel
+        - meson
+        - micro
+        - tcl8-devel
+        - tk8-devel
+        - typescript
+
+  - type: default-flatpaks
+    system:
+      install:
+        - com.jeffser.Alpaca
+        - dev.zed.Zed-Preview
+        - io.github.benini.scid
+        - io.github.shiftey.Desktop  # github desktop
+
+  - type: gnome-extensions
+    install:
+      - Forge
+```
 
 ## Installation
 
