@@ -83,7 +83,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/whelanh/mybluefin-nvidia:latest
   ```
-  or
+  or for non-NVIDIA
     ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/whelanh/mybluefin-amd:latest
   ```
@@ -96,7 +96,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/whelanh/mybluefin-nvidia:latest
   ```
-  or
+  or for non-NVIDIA
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/whelanh/mybluefin-amd:latest
   ```
