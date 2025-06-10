@@ -14,7 +14,7 @@ This repository builds two variants of a custom Bluefin image:
    
       Image base: ghcr.io/ublue-os/bluefin-dx-nvidia-open
 
-
+# Changes
 
 ```
 Changes:
