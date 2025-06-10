@@ -2,8 +2,20 @@
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
+# My Custom Images
 
-Image base: ghcr.io/ublue-os/bluefin-dx-nvidia-open
+This repository builds two variants of a custom Bluefin image:
+
+   Standard version for machines without NVIDIA GPUs
+
+      Image base: ghcr.io/ublue-os/bluefin-dx 
+   
+   Nvidia Version
+   
+      Image base: ghcr.io/ublue-os/bluefin-dx-nvidia-open
+
+
+
 ```
 Changes:
     repos:
@@ -54,6 +66,10 @@ Changes:
   - type: gnome-extensions
     install:
       - Forge
+
+  - type: rpm-ostree
+    install:
+      - https://cdn.insynchq.com/builds/linux/3.9.6.60027/insync-3.9.6.60027-fc42.x86_64.rpm
 ```
 
 ## Installation
