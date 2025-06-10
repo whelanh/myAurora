@@ -16,7 +16,7 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-  
+
   - type: dnf
     repos:
       cleanup: true
@@ -30,17 +30,18 @@ modules:
         - kmymoney
         - micro
         - python3-pip
-        - r 
+        - r
         - rstudio
         - fontawesome-fonts-all
         - freetype-devel
         - fribidi-devel
         - zsh
         - java-latest-openjdk-devel
-        - gcc 
+        - gcc
         - gcc-c++
-        - clang 
-        - llvm 
+        - gcc-gfortran
+        - clang
+        - llvm
         - sqlitebrowser
         - lftp
         - libcurl-devel
@@ -54,13 +55,25 @@ modules:
         - tk8-devel
         - typescript
 
+  - type: default-flatpaks
+    system:
+      install:
+        - com.jeffser.Alpaca
+        - dev.zed.Zed-Preview
+        - io.github.benini.scid
+        - io.github.shiftey.Desktop  # github desktop
+
+  - type: gnome-extensions
+    install:
+      - Forge
+
   # - type: rpm-ostree
   #   repos:
   #     - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
   #   install:
   #     - micro
   #     - duf
-  #     - fish 
+  #     - fish
   #     - gcc
   #   remove:
   #     # example: removing firefox (in favor of the flatpak)
@@ -80,4 +93,3 @@ modules:
   #   user: {} # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
