@@ -1,0 +1,4 @@
+type: chezmoi
+repository: "https://github.com/whelanh/dotfiles" # my dotfiles repo
+all-users: true # enable for all users
+file-conflict-policy: skip # override changed files with those from the repo

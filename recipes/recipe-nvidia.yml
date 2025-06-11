@@ -71,6 +71,8 @@ modules:
     install:
       - https://cdn.insynchq.com/builds/linux/3.9.6.60027/insync-3.9.6.60027-fc42.x86_64.rpm
 
+  # Chezmoi setup
+  - from-file: custom/chezmoi.yml
   # - type: rpm-ostree
   #   repos:
   #     - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
