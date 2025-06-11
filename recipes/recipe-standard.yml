@@ -73,7 +73,7 @@ modules:
 
   - type: rpm-ostree
     install:
-      - https://app.warp.dev/get_warp?package=rpm
+      - https://app.warp.dev/get_warp?package=rpm&channel=preview
   
   # Chezmoi setup
   - from-file: custom/chezmoi.yml
