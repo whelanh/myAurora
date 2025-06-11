@@ -70,6 +70,9 @@ Changes:
   - type: rpm-ostree
     install:
       - https://cdn.insynchq.com/builds/linux/3.9.6.60027/insync-3.9.6.60027-fc42.x86_64.rpm
+
+  # Chezmoi setup
+  - from-file: custom/chezmoi.yml
 ```
 
 ## Installation
