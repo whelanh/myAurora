@@ -8,11 +8,11 @@ This repository builds two variants of a custom Bluefin image:
 
    Standard version for machines without NVIDIA GPUs
 
-      Image base: ghcr.io/ublue-os/bluefin-dx 
+      Image base: ghcr.io/ublue-os/bluefin-dx:latest 
    
    Nvidia Version
    
-      Image base: ghcr.io/ublue-os/bluefin-dx-nvidia-open
+      Image base: ghcr.io/ublue-os/bluefin-dx-nvidia-open:latest
 
 # Changes
 
@@ -105,7 +105,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml` (which is Bluefin:latest).
 
 ## ISO
 
