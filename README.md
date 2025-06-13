@@ -54,6 +54,7 @@ Changes:
         - tcl8-devel
         - tk8-devel
         - typescript
+        - openrgb
 
   - type: default-flatpaks
     system:
