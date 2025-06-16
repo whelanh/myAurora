@@ -56,7 +56,6 @@ modules:
         - tk8-devel
         - typescript
         - openrgb
-        - vinagre
 
   - type: default-flatpaks
     system:
