@@ -56,7 +56,6 @@ modules:
         - tk8-devel
         - typescript
         - openrgb
-        - tigervnc-server
 
   - type: default-flatpaks
     system:
