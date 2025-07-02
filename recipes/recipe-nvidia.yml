@@ -25,7 +25,6 @@ modules:
 
     install:
       packages:
-        - fish
         - tmux
         - kmymoney
         - micro
