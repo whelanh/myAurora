@@ -57,8 +57,7 @@ modules:
         - openrgb
 
   - type: default-flatpaks
-    system:
-      install:
+    install:
         - dev.zed.Zed-Preview
         - io.github.benini.scid
         - io.github.shiftey.Desktop  # github desktop
