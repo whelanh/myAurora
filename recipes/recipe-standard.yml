@@ -59,7 +59,6 @@ modules:
   - type: default-flatpaks
     system:
       install:
-        - com.jeffser.Alpaca
         - dev.zed.Zed-Preview
         - io.github.benini.scid
         - io.github.shiftey.Desktop  # github desktop
