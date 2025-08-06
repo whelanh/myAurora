@@ -57,11 +57,12 @@ modules:
         - openrgb
 
   - type: default-flatpaks
-    install:
-      - dev.zed.Zed-Preview
-      - io.github.benini.scid
-      - io.github.shiftey.Desktop  # github desktop
-      - io.github.dvlv.boxbuddyrs
+    configurations:
+      - install:
+          - dev.zed.Zed-Preview
+          - io.github.benini.scid
+          - io.github.shiftey.Desktop  # github desktop
+          - io.github.dvlv.boxbuddyrs
 
   - type: gnome-extensions
     install:
