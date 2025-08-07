@@ -57,11 +57,16 @@ Changes:
         - openrgb
 
   - type: default-flatpaks
-    system:
-      install:
-        - dev.zed.Zed-Preview
-        - io.github.benini.scid
-        - io.github.shiftey.Desktop  # github desktop
+    configurations:
+      - install:
+          - dev.zed.Zed-Preview
+          - io.github.benini.scid
+          - io.github.shiftey.Desktop  # github desktop
+          - io.github.dvlv.boxbuddyrs
+          - be.alexandervanhee.gradia
+          - com.github.xournalpp.xournalpp
+          - dev.zed.Zed-Preview
+          - com.google.ChromeDev
 
   - type: gnome-extensions
     install:
