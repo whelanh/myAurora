@@ -68,9 +68,9 @@ modules:
           - dev.zed.Zed-Preview
           - com.google.ChromeDev
 
-  - type: gnome-extensions
-    install:
-      - Forge
+  #- type: gnome-extensions
+  #  install:
+  #    - Forge
 
   - type: rpm-ostree
     install:
