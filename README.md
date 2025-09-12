@@ -16,6 +16,8 @@ This repository builds two variants of a custom Aurora image:
 
 # Changes
 
+This image adds additional packages on top of the Aurora DX base image. 
+
 ```
 Changes:
     repos:
@@ -27,19 +29,15 @@ Changes:
       packages:
         - kmymoney
         - micro
-        - python3-pip
         - r
+        - R-devel
         - rstudio
         - fontawesome-fonts-all
         - freetype-devel
         - fribidi-devel
-        - zsh
         - java-latest-openjdk-devel
-        - gcc
         - gcc-c++
         - gcc-gfortran
-        - clang
-        - llvm
         - sqlitebrowser
         - lftp
         - libcurl-devel
@@ -48,11 +46,9 @@ Changes:
         - libtiff-devel
         - llvm-devel
         - meson
-        - micro
         - tcl8-devel
         - tk8-devel
         - typescript
-        - openrgb
 
   - type: default-flatpaks
     configurations:
