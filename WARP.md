@@ -4,9 +4,9 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-myBluefin is a BlueBuild-based custom OS image repository that builds two variants of a personal Bluefin/Aurora Linux distribution:
+myAurora is a BlueBuild-based custom OS image repository that builds two variants of a personal Aurora Linux distribution:
 - **Standard (AMD)**: Based on `ghcr.io/ublue-os/aurora-dx` for non-NVIDIA machines  
-- **NVIDIA**: Based on `ghcr.io/ublue-os/bluefin-dx-nvidia-open` for NVIDIA GPU machines
+- **NVIDIA**: Based on `ghcr.io/ublue-os/aurora-dx-nvidia` for NVIDIA GPU machines
 
 The project uses BlueBuild's declarative YAML configuration system to customize base Universal Blue images with additional packages, Flatpaks, GNOME extensions, and dotfiles integration via chezmoi.
 
@@ -35,20 +35,20 @@ yamllint recipes/recipe-*.yml
 actionlint .github/workflows/build.yml
 
 # Verify cosign public key
-cosign verify --key cosign.pub ghcr.io/whelanh/mybluefin-amd:latest
+cosign verify --key cosign.pub ghcr.io/whelanh/myaurora-amd:latest
 ```
 
 ### Container Image Commands
 ```bash
 # Rebase to unsigned image (first time)
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/whelanh/mybluefin-amd:latest
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/whelanh/myaurora-amd:latest
 # OR for NVIDIA:
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/whelanh/mybluefin-nvidia:latest
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/whelanh/myaurora-nvidia:latest
 
 # Rebase to signed image (after first reboot)
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/whelanh/mybluefin-amd:latest
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/whelanh/myaurora-amd:latest
 # OR for NVIDIA:
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/whelanh/mybluefin-nvidia:latest
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/whelanh/myaurora-nvidia:latest
 ```
 
 ## Architecture and Structure
@@ -83,11 +83,10 @@ Recipes execute modules in sequential order:
 ### Key Configuration Differences
 
 **Standard vs NVIDIA variants:**
-- Base image: `aurora-dx` vs `bluefin-dx-nvidia-open`
-- NVIDIA recipe includes additional packages: `tmux`
-- NVIDIA recipe includes extra Flatpaks: Zed Preview, Chrome Dev
-- NVIDIA recipe enables Forge GNOME extension
-- NVIDIA recipe includes Insync RPM package
+- Base image: `aurora-dx` vs `aurora-dx-nvidia`
+- Both variants currently have identical package sets and configurations
+- Both variants include the same Flatpak applications
+- GNOME extensions are currently commented out in both variants
 
 ### External Dependencies
 - **Base Images**: Universal Blue project images (ghcr.io/ublue-os/*)
