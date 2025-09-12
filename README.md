@@ -4,15 +4,15 @@ See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup i
 
 # My Custom Images
 
-This repository builds two variants of a custom Bluefin image:
+This repository builds two variants of a custom Aurora image (despite the name of this repo):
 
    Standard version for machines without NVIDIA GPUs
 
-      Image base: ghcr.io/ublue-os/bluefin-dx:latest 
+      Image base: ghcr.io/ublue-os/aurora-dx:latest 
    
    Nvidia Version
    
-      Image base: ghcr.io/ublue-os/bluefin-dx-nvidia-open:latest
+      Image base: ghcr.io/ublue-os/aurora-dx-nvidia:latest
 
 # Changes
 
@@ -25,8 +25,6 @@ Changes:
 
     install:
       packages:
-        - fish
-        - tmux
         - kmymoney
         - micro
         - python3-pip
@@ -59,22 +57,15 @@ Changes:
   - type: default-flatpaks
     configurations:
       - install:
-          - dev.zed.Zed-Preview
           - io.github.benini.scid
           - io.github.shiftey.Desktop  # github desktop
           - io.github.dvlv.boxbuddyrs
           - be.alexandervanhee.gradia
           - com.github.xournalpp.xournalpp
-          - dev.zed.Zed-Preview
-          - com.google.ChromeDev
 
-  - type: gnome-extensions
-    install:
-      - Forge
-
-  - type: rpm-ostree
-    install:
-      - https://cdn.insynchq.com/builds/linux/3.9.6.60027/insync-3.9.6.60027-fc42.x86_64.rpm
+  #- type: gnome-extensions
+  #  install:
+  #    - Forge
 
   # Chezmoi setup
   - from-file: custom/chezmoi.yml
