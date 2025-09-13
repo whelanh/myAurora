@@ -54,8 +54,6 @@ Changes:
     configurations:
       - install:
           - io.github.benini.scid
-          - io.github.shiftey.Desktop  # github desktop
-          - io.github.dvlv.boxbuddyrs
           - be.alexandervanhee.gradia
           - com.github.xournalpp.xournalpp
 
