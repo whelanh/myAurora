@@ -38,7 +38,6 @@ Changes:
         - java-latest-openjdk-devel
         - gcc-c++
         - gcc-gfortran
-        - sqlitebrowser
         - lftp
         - libcurl-devel
         - libjpeg-turbo-devel
@@ -56,6 +55,7 @@ Changes:
           - io.github.benini.scid
           - be.alexandervanhee.gradia
           - com.github.xournalpp.xournalpp
+          - org.sqlitebrowser.sqlitebrowser
 
   #- type: gnome-extensions
   #  install:
